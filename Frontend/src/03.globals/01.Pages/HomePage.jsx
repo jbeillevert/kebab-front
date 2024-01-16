@@ -12,12 +12,14 @@ const HomePage = () => {
     const [searchInput, setSearchInput] = useState("");
     const [filteredBySearchBar, setFilteredBySearchBar] = useState([]);
 
+
     useEffect(() => {
         axios
             .get(`http://localhost:3000/recipes`)
             .then((res) => {
                 setData(res.data.data)
             })
+
 
         if (searchInput.length > 0) {
             //Filtrer les recherches dans la barre de recherche
