@@ -11,7 +11,6 @@ const RecipePageDetails = () => {
         axios.get(`http://localhost:3000/recipes/${id}`)
             .then((result) => {
                 setData(result.data.data);
-                console.log(result.data.data);
             })
             .catch((err) => {
                 console.error("Error fetching datas : ", err);
