@@ -64,7 +64,11 @@ const HomePage = () => {
                                 <img className='bg-neutral-400 w-full h-3/4 rounded-t-lg'></img>
                                 <div className='p-2 flex flex-col gap-2'>
                                     <h3 className=''>{e.name}</h3>
-                                    <button className='bg-orange-400 w-fit py-1 px-4 rounded-md text-white font-medium hover:bg-orange-500 duration-150' value={e.id}>Voir</button>
+                                    <NavLink to={`/recipes/${e.id}`}>
+                                        <button className='bg-orange-400 w-fit py-1 px-4 rounded-md text-white font-medium hover:bg-orange-500 duration-150' value={e.id}>Voir</button>
+
+
+                                    </NavLink>
                                 </div>
                             </div>
                         )
