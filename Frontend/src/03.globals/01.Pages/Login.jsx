@@ -25,7 +25,7 @@ const Login = () => {
 
 
     return (
-        <div className='h-full w-full flex items-center justify-center'>
+        <div className='h-full min-h-screen w-full flex items-center justify-center '>
                 <form action="" className='bg-white border-solid border-2 h-fit w-1/2 border-orange-600 flex flex-col justify-center p-16 rounded-lg gap-4' onSubmit={handleSubmit} >
                     <h1 className='font-black text-2xl'>Content de vous revoir</h1>
                     <p className='text-2xl'>Connectez-vous et créer vos recettes</p>
