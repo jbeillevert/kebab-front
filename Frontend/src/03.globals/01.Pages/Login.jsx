@@ -16,7 +16,7 @@ const Login = () => {
     axios
         .post("http://localhost:3000/login", {email: email, password: password})
         .then(() => {
-        navigate("/Admin")
+        navigate("/admin")
     })
     .catch((err) => {
         console.warn("retour err", err);  
