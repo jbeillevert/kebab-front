@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "../03.globals/01.Pages/HomePage";
 import Login from "../03.globals/01.Pages/Login"
 import RecipePageDetails from "../03.globals/01.Pages/RecipePageDetails";
+import Admin from "../03.globals/01.Pages/Admin"
 
 function Router() {
     return (
@@ -9,6 +10,7 @@ function Router() {
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login/>}/>
             <Route path="/recipes/:id" element={<RecipePageDetails />} />
+            <Route path="/admin" element={<Admin/>}/>
             
             
             // redirection automatique si la page n'existe pas

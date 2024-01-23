@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 // import Navbar from '../03.Components/Navbar';
-import axios from 'axios'
+import axios from "axios";
 import { NavLink } from "react-router-dom";
-import SearchBar from '../03.Components/SearchBar';
-
+import SearchBar from "../03.Components/SearchBar";
 
 const HomePage = () => {
     const [data, setData] = useState([]);
@@ -45,11 +44,11 @@ const HomePage = () => {
                 </div>
             </div>
             <div className='flex flex-col items-center p-8 gap-8 m-auto'>
-                <div>
+                <div className='w-full'>
                     <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
 
                 </div>
-                <div className='flex flex-wrap p-8 gap-8 m-auto'>
+                <div className='grid grid-cols-3 py-24 px-8 gap-24 m-auto'>
                     {filteredBySearchBar ? filteredBySearchBar.map((e, index) => {
                         return (
                             <div key={index} className='bg-white min-w-64 w-80 h-52 rounded-lg shadow-sm hover:shadow-md duration-150  cursor-pointer max-w-52 flex flex-col'>
@@ -75,13 +74,12 @@ const HomePage = () => {
                             </div>
                         )
                     })}
-
-
                 </div>
-
             </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default HomePage;
