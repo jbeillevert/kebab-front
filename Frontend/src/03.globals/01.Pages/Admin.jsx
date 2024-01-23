@@ -6,7 +6,6 @@ import { FaPencilAlt, FaTrash } from "react-icons/fa";
 const Admin = () => {
 
     const [data, setData] = useState([])
-
     useEffect(() => {
         axios
             .get(`http://localhost:3000/recipes`)
@@ -14,6 +13,17 @@ const Admin = () => {
                 setData(res.data.data)
             })
     }, [])
+
+    const handleDeleted = (e) => {
+        if(e !== null){
+            axios
+            .delete(`http://localhost:3000/recipes/${e}`)
+        }
+        
+        
+        
+    }
+    data
     return (
         <div className='h-full w-full'>
             <div className='bg-white py-4 px-8'>
@@ -37,7 +47,7 @@ const Admin = () => {
                                 </div>
                                 <div className='flex gap-5'>
                                     <button><FaPencilAlt className='text-blue-600' />  </button>
-                                    <button><FaTrash className='text-red-500' />  </button>
+                                    <button onClick={() => handleDeleted(e.id)}><FaTrash className='text-red-500'/>  </button>
                                 </div>
                             </div>
                         )
