@@ -30,9 +30,9 @@ const RecipePageDetails = () => {
         <div className="flex justify-center items-center mt-5">
             {data && data.map((el, index) => {
                 return (
-                    <div key={index} className="bg-white min-w-64 rounded-xl shadow-sm max-w-52 p-5">
+                    <div key={index} className="bg-white w-2/3 rounded-xl shadow-sm max-w-52 p-5">
                         <h3 className="font-Grotesk-Extrabold text-3xl text-center">{el.name}</h3>
-                        <div className="h-52 flex rounded-xl border-2 border-slater-600">
+                        <div className="h-52 flex rounded-xl justify-center my-5">
                             <img className="rounded-xl border-2 border-slater-600" src={el.picture} alt="" />
                         </div>
                         <div className="w-full h-[2px] mt-2 bg-slate-600" />
