@@ -45,7 +45,7 @@ const HomePage = () => {
                 </div>
             </div>
             <div className='flex flex-col items-center p-8 gap-8 m-auto'>
-                <div>
+                <div className='w-full'>
                     <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
 
                 </div>
